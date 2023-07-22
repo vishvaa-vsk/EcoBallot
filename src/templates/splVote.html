@@ -23,6 +23,7 @@
     {% endfor %}
 
     <div class="candiContainer shadow p-3">
+      <form action="{{url_for('main.asplSrSecVote')}}" method="POST"></form>
       <h4 class="title">The candidates for the School Pupil Leader (SPL) election are</h4>
             <div class="splVoteForm">
               <div class="row">
@@ -45,9 +46,7 @@
                 </div>
                 {% endfor %}
               </div>
-     </div>
+      </form>
+    </div>
 {% endblock %}
 {% block footer %}{% endblock %}
-
-
-
