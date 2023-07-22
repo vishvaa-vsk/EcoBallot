@@ -31,7 +31,7 @@ class AdminTable(db.Model):
 
 class CandidateDetails(db.Model):
     _id = db.Column(db.Integer(),primary_key=True)
-    name = db.Column(db.String(50),nullable=False)
-    position = db.Column(db.String(50),nullable=False)
-    imageName = db.Column(db.String(50),nullable=False)
+    name = db.Column(db.String(100),nullable=False)
+    position = db.Column(db.String(100),nullable=False)
+    imageName = db.Column(db.String(500),nullable=False)
     

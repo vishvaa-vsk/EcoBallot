@@ -23,7 +23,8 @@ def adminLogin():
     if request.method == "POST":
         session.permanent = True
         username,passwd = request.form["username"],request.form["passwd"]
-        if db.session.query(db.session.query(AdminTable).where(AdminTable.username==str(username) and check_password_hash(AdminTable.passwd, passwd))):
+        user = db.session.query(AdminTable).filter(AdminTable.username == username).first()
+        if check_password_hash(user.passwd,passwd):
             session["adminLogin"] = True
             session["adminName"] = username
             return redirect(url_for("admin.adminDashBoard"))
@@ -121,7 +122,7 @@ def addCandidateDetails():
         form = AddStudentsForm()
         if request.method == "POST":
             if form.validate_on_submit():
-                name = str(form.Candidatename.data).capitalize
+                name = str(form.Candidatename.data).title()
                 position = str(form.position.data)
                 file = request.files['file']
                 filename = secure_filename(file.filename)

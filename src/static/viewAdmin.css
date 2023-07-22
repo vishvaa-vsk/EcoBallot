@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 table {
   border-collapse: collapse;
 }
@@ -14,7 +16,11 @@ th {
   color: white;
 }
 
-.grid-container{
-  display: grid;
-  gap:50px 100px;
+
+
+.grid-item table{
+  margin: auto;
+  display: inline-grid;
+  align-content: space-around;
+
 }

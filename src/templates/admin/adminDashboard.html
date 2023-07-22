@@ -26,8 +26,10 @@
     <div class="adminButtons">
         <a class="btn btn-success" href="{{url_for('admin.newAdmin')}}">Add New User</a>
         <a class="btn btn-primary" href="{{url_for('admin.viewAdmins')}}">View All Admins</a>
-        <a class="btn btn-warning" href="{{url_for('admin.viewStudents')}}">View Voted Students</a>
-        <a class="btn btn-warning" href="{{url_for('admin.addCandidateDetails')}}"> Add Candidate Details</a>
+    </div>
+    <div class="adminButtons">
+        <a class="btn btn-info" href="{{url_for('admin.viewStudents')}}">View Voted Students</a>
+        <a class="btn btn-secondary" href="{{url_for('admin.addCandidateDetails')}}"> Add Candidate Details</a>
     </div>
 </div>
 {% endblock %}

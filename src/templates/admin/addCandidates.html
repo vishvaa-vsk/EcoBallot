@@ -18,7 +18,7 @@
     <h1>Add Candidate Details</h1>
     <br>
     {% for message in get_flashed_messages() %}
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
             {{message}}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
@@ -29,11 +29,11 @@
         <br>
         {{ form.Candidatename.label(class="form-label") }}
         <br>
-        {{ form.Candidatename(class="form-control") }}
+        {{ form.Candidatename(class="form-control",autocomplete="off") }}
         <br>
         {{ form.position.label(class="form-label") }}
         <br>
-        {{ form.position(class="form-control") }}
+        {{ form.position(option_attr={"division-0": {"disabled": ""} }, class="form-control") }}
         <br>
         {{ form.file(class="form-control") }}
         <br>
