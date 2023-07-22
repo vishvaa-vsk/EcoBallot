@@ -33,7 +33,7 @@ if __name__ == "__main__":
     try:
         installDependencies()
         setFlaskApp()
-        time.sleep(1.5)
+        time.sleep(1)
         setEnvironVariables()
     except Exception as e:
         print(e)
