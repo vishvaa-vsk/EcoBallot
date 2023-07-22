@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='viewAdmin.css')}}">
+</head>
+<body>
+    <div class="gridcontainer">
+        <div class="grid-item">
+            <table class="students">
+                <caption>8th Students</caption>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                </tr>
+                {% for student in eight %}
+                <tr>
+                    <td>{{student[0]}}</td>
+                    <td>{{student[1]}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="grid-item">
+            <table class="students">
+                <caption>9th Students</caption>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                </tr>
+                {% for student in nineth %}
+                <tr>
+                    <td>{{student[0]}}</td>
+                    <td>{{student[1]}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="grid-item">
+            <table class="students">
+                <caption>10th Students</caption>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                </tr>
+                {% for student in tenth %}
+                <tr>
+                    <td>{{student[0]}}</td>
+                    <td>{{student[1]}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="grid-item">
+            <table class="students">
+                <caption>11th Students</caption>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                </tr>
+                {% for student in eleventh %}
+                <tr>
+                    <td>{{student[0]}}</td>
+                    <td>{{student[1]}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="grid-item">
+            <table class="students">
+                <caption>12th Students</caption>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                </tr>
+                {% for student in tweleveth %}
+                <tr>
+                    <td>{{student[0]}}</td>
+                    <td>{{student[1]}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+    
+</body>
+</html>

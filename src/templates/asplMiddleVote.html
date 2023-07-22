@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}ASPL-VoteSection{% endblock %}
+
+{% block customCSS %}
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="{{url_for('static',filename='splVote.css')}}"">
+{% endblock %}
+
+{% block customJS %}
+    <!-- Custom JS -->
+    <script src="/static/voteForm.js"></script>
+{% endblock %}
+
+{% block bodyContent %}
+    <h3 class="greet">Select the Assistant School Pupil Leader (ASPL) for your school</h3>
+    
+    {% for message in get_flashed_messages() %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endfor %}
+
+    <div class="candiContainer shadow p-3">
+        
+      <h4 class="title">The candidates for the Assistant School Pupil Leader (ASPL) election are</h4>
+        
+        <!-- <form action="{{url_for('main.asplMiddleVote')}}" method="POST"> -->
+            <div class="asplVoteForm">
+              <div class="row">
+              {% for candidate in data %}
+                <div class="col-sm-6">
+                      <div class="card mb-3" style="max-width: 500px;">
+                          <div class="row g-0">
+                            <div class="col-md-4">
+                              <img src="{{ url_for('static', filename='img/') }}/{{candidate[1]}}"
+                              style="width: 150px; height: 150px;">
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <h5 class="card-title">{{candidate[0]}}</h5>
+                                <button type="button" id="VoteButton" value="{{candidate[0]}}" onclick="sendUserVote(this.value,'/asplMiddleVote')" class="btn btn-primary">Vote for me</button>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                </div>
+              {% endfor %}
+              </div>
+            </div>
+        <!-- </form> -->
+    </div>
+{% endblock %}

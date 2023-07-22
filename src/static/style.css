@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+.schoolName{
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: normal;
+    float: auto;
+}
+
+.schoolBanner{
+    display: flex;
+    background-color: beige;
+    align-items: center;
+    justify-content: center;
+}
+
+.schoolLogo{
+    margin: 15px;
+    width: 80px;
+
+}
+.schoolBanner::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.greet{
+    margin: 20px;
+    text-align: center;
+}
+
+.logintext{
+    margin: 10px;
+    text-align: center;
+}
+
+
+.loginBox{
+    width: 50%;
+    height: 2%;
+    background-color: #daf3ff;
+    align-items: center;
+    margin: 60px auto;
+    border: 1px transparent;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.loginForm label{
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 20px;
+    font-family:'Poppins', sans-serif;
+}
+
+.btn{
+    margin: 20px;
+}
+
+.loginForm input{
+    outline: none;
+    padding: 7px;
+    border:1px solid grey;
+    border-radius: 5px;
+    width: 250px;
+}
+
+footer {
+    margin-top: auto;
+    background-color:beige;
+    color: black;
+    padding: 1rem;
+    text-align: center;
+}

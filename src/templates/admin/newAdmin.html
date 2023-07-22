@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Add New Admin{% endblock %}
+
+{% block bodyContent %}
+<div class="loginBox shadow-lg p-3 mb-5 bg-body rounded">
+    <h4 class="logintext">Vote For More Effective Management!</h4>
+    <form action="{{url_for('admin.newAdmin')}}" method="POST">
+        <div class="loginForm">
+        <label for="username" class="col-form-label">Username</label>
+        <input type="text" name="username" required aria-placeholder="username" autocomplete="off"><br>
+        <label for="newAdminpassword" class="col-form-label">Password</label>
+        <input type="password" name="passwd" required aria-placeholder="passwd" autocomplete="off" minlength="8"><br>
+        </div>
+        <button type="submit" class="btn btn-success">Add User</button>
+    </form>
+</div>
+{% endblock %}

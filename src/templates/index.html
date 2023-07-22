@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}SKNS-PMC-eElection{% endblock %}
+
+{% block bodyContent %}
+<h3 class="greet">Greetings from the SKNS PMC VV eElection <br> <br>{{year}}-{{year+1}}</h3>
+    {% for message in get_flashed_messages() %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endfor %}
+<div class="loginBox shadow-lg p-3 mb-5 bg-body rounded">
+    <h4 class="logintext">Vote For More Effective Management!</h4>
+    <form action="/" method="POST">
+        <div class="loginForm">
+        <label for="studName" class="col-form-label">Your Name</label><br>
+        <input type="text" name="studName" required aria-placeholder="studName" autocomplete="off" style="text-transform: capitalize;"><br>
+        <label for="admissionNo" class="col-form-label">Your Roll No</label><br>
+        <input type="number" name="rollNo" required aria-placeholder="rollNo" autocomplete="off"><br>
+        </div>
+        <button type="submit" class="btn btn-success">Login</button>
+    </form>
+</div>
+{% endblock %}

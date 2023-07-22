@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+.sidebar {
+  height: 100%; 
+  width: 230px; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  background-color: #0E123E; 
+  overflow-x: hidden; 
+
+}
+body{
+    background-color: #F4F7FD;
+    font-family: Poppins;
+}
+.sidebar a {
+    display: block;
+    color: black;
+    background-color: whitesmoke;
+    border-radius: 40px 0px 0px 40px;
+    padding: 20px;
+    margin: 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.sidebar a.active {
+    background-color: #EF786B;
+    border-radius: 40px 0px 0px 40px;
+    color: white;
+    
+}
+
+.sidebar a:hover:not(.active) {
+    background-color: #EF786B;
+    color: white;
+    transition: width 2s;
+
+}
+
+.adminName{
+    color: white;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: normal;
+    float: auto;
+}
+
+.adminBanner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.schoolLogo{
+    margin: 10px;
+    width: 50px;
+
+}
+.schoolBanner::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.totalVotes{
+    background-color: white;
+    width: 350px;
+    height: 50px;
+    border-radius: 12px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    margin: auto;
+}
+.totalVotes span{
+    margin: 10px;
+    text-align: center;
+}
+
+.adminButtons a{
+    margin: 10px 25px 0px 0px;
+}
+
+div.content {
+    margin-top: 60px;
+    margin-left: 250px;
+    padding: 0px 0px;
+    /* height: 1000px; */
+  }
+  .main{
+    
+    width: 100%;
+    display: flex;
+    
+  }
+
+ 
+.candiVotes{
+    background-color: white;
+    margin: 32px;
+    width: 300px;
+    height: 12%;
+    text-align: center;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.candidates{
+    margin-top: 100px;
+    max-width: 262px;   
+    
+}
+
+.winner{
+    margin-top: 125px;
+    margin-left: 20%;
+    background-color: white;
+    width: 300px;
+    height: 100%;
+    text-align: center;
+}
+
+.winner img{
+    border: 1px solid black;
+    margin-top: 10px;
+    width: 300px;
+    height: 300px;
+}
+
+
+
+
+  @media screen and (max-width: 700px) {
+    .main{
+        display: block;
+    }
+    .winner{
+        margin: auto;
+    }
+    .candidates{
+        margin: auto;
+        
+        
+    }
+    
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .main{
+        display: block;
+    }
+    .candidates{
+        margin: auto;
+        
+        
+    }
+    
+    .winner{
+        margin: auto;
+    }
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+    
+   
+  }

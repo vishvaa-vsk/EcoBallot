@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+.greet{
+    margin: 5px;
+    text-align: center;
+    font-style: normal;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+
+.card-title{
+    font-size: 22px;
+
+    text-align: center;
+    margin-top: 10px;
+}
+
+.title{
+    margin: 5px;
+    padding: 10px;
+}
+.voteSelect{
+    width: 15rem;
+    height: 2rem;
+    margin: 10px;
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    
+}
+
+.candiContainer{
+    text-align: center;
+    align-items: center;
+    background-color: #effaff;
+    width: 60%;
+    margin: 50px auto;
+    border: 1px transparent;
+    border-radius: 20px;
+}
+
+.splVoteForm{
+    align-items: center;
+    /* display: flex; */
+    justify-content: space-between;
+    /* flex-direction: column; */
+    margin: 30px auto;
+}
+
+.splVoteForm .col-sm-6{
+    padding: 20px;
+}
+
+.splVoteForm .row{
+    margin: 10px;
+}

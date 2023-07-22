@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Vote Sucess{% endblock %}
+
+{% block bodyContent %}
+<embed src="/static/beep.wav" loop="true" autostart="true" width="2" height="0">
+<h1 style="text-align:center;margin:20px;"> 
+    Hi, {{name}}
+    <br>
+    <br>
+    <h1 style="text-align:center;margin:20px;">You have successfully voted in the election.</h1>
+    <h1 style="text-align:center;margin:20px;">Click the refresh button below and move!</h1>
+
+    <a href="{{url_for('main.logout')}}" class="btn btn-primary" style="width: 150px; margin: auto;">
+        Refresh
+    </a>
+{% endblock %}
+
