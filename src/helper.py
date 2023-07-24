@@ -26,6 +26,10 @@ def setAdmin():
     admin = AdminTable(username=username,passwd=passwd)
     db.session.add(admin)
 
+def getWinnerPhoto(winner):
+    getPhoto = CandidateDetails.query.with_entities(CandidateDetails.imageName).filter(CandidateDetails.name==winner).first()
+    return getPhoto[0]
+
 def getSplResults():
     Candidates = []
     getCandidates = CandidateDetails.query.with_entities(CandidateDetails.name).filter(CandidateDetails.position=="SPL").all()

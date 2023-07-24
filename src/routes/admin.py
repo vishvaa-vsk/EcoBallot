@@ -73,9 +73,10 @@ def splResult():
        totalVotes = SplTable.query.count()
        result = getSplResults()
        winners = [key for key, value in result.items() if value == max(result.values())]
+       winnerImage = getWinnerPhoto(winners[0])
     else:
         return redirect(url_for("admin.adminLogin"))
-    return render_template("admin/splResults.html",total_votes=totalVotes,result=result,winners=winners)
+    return render_template("admin/splResults.html",winnerImage=winnerImage,total_votes=totalVotes,result=result,winners=winners)
 
 @admin.route("/asplMiddleResults",methods=["GET","POST"])
 def asplMiddleResult():
@@ -83,9 +84,10 @@ def asplMiddleResult():
        totalVotes = Aspl_Middle_Table.query.count()
        result = getAspl_Middle_Results()
        winners = [key for key, value in result.items() if value == max(result.values())]
+       winnerImage = getWinnerPhoto(winners[0])
     else:
         return redirect(url_for("admin.adminLogin"))
-    return render_template("admin/asplResults.html",total_votes=totalVotes,result=result,winners=winners)
+    return render_template("admin/asplResults.html",winnerImage=winnerImage,total_votes=totalVotes,result=result,winners=winners)
 
 @admin.route("/asplHsecResults",methods=["GET","POST"])
 def asplHsecResult():
@@ -93,9 +95,10 @@ def asplHsecResult():
        totalVotes = Aspl_hSec_Table.query.count()
        result = getAspl_hSec_Results()
        winners = [key for key, value in result.items() if value == max(result.values())]
+       winnerImage = getWinnerPhoto(winners[0])
     else:
         return redirect(url_for("admin.adminLogin"))
-    return render_template("admin/asplResults.html",total_votes=totalVotes,result=result,winners=winners)
+    return render_template("admin/asplResults.html",total_votes=totalVotes,winnerImage=winnerImage,result=result,winners=winners)
 
 @admin.route("/asplSrSecResults",methods=["GET","POST"])
 def asplSrSecResult():
@@ -103,9 +106,10 @@ def asplSrSecResult():
        totalVotes = Aspl_Sr_Sec_Table.query.count()
        result = getAspl_Sr_Sec_Results()
        winners = [key for key, value in result.items() if value == max(result.values())]
+       winnerImage = getWinnerPhoto(winners[0])
     else:
         return redirect(url_for("admin.adminLogin"))
-    return render_template("admin/asplResults.html",total_votes=totalVotes,result=result,winners=winners)
+    return render_template("admin/asplResults.html",total_votes=totalVotes,winnerImage=winnerImage,result=result,winners=winners)
 
 @admin.route('/votedStudents',methods=['GET', 'POST'])
 def viewStudents():

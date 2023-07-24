@@ -41,7 +41,7 @@
         {% else %}
             <div class="winner">
                 <span>Winner is {{winners[0]}}</span><br>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png" alt="pic">
+                <img src="{{url_for('static',filename='img/')}}/{{winnerImage}}" alt="pic">
             </div>
         {% endif %}
     </div>
