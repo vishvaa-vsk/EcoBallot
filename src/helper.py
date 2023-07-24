@@ -71,13 +71,18 @@ def getAspl_Middle_Results():
 
 def getLevel(roll):
     if len(roll) == 4:
-        if roll[0] == "8":
-            return "Middle"
-        elif roll[0] == "9":
-            return "Higher"
+        if roll[1] != "0":
+            if roll[0] == "8":
+                return "Middle"
+            elif roll[0] == "9":
+                return "Higher"
+        else:
+            return "Fake"
     else:
         if roll[:2] == "10":
             return "Higher"
-        else:
+        if roll[:2] == "11" or roll[:2] == "12":
             return "Senior"
+        else:
+            return "Fake"
         

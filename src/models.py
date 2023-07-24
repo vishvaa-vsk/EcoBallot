@@ -4,9 +4,9 @@ class Students(db.Model):
     rollNo = db.Column(db.Integer,primary_key=True)
     name = db.Column(db.String(50),nullable=False)
     splVotes = db.relationship('SplTable',backref='students')
-    asplSrSecVotes = db.relationship('Aspl_Sr_Sec_Table',backref='students')
-    asplHSecVotes = db.relationship('Aspl_hSec_Table',backref='students')
-    asplMiddleVotes = db.relationship('Aspl_Middle_Table',backref='students')
+    asplSrSecVotes = db.relationship('Aspl_Sr_Sec_Table',backref='students',cascade="all, delete-orphan")
+    asplHSecVotes = db.relationship('Aspl_hSec_Table',backref='students',cascade="all, delete-orphan")
+    asplMiddleVotes = db.relationship('Aspl_Middle_Table',backref='students',cascade="all, delete-orphan")
 
 class SplTable(db.Model):
     rollNo = db.Column(db.Integer ,db.ForeignKey('students.rollNo'),primary_key=True)

@@ -14,7 +14,7 @@ admin = Blueprint("admin",__name__,url_prefix="/admin")
 
 class AddStudentsForm(FlaskForm):
     Candidatename = StringField("Enter the Candidate Name",validators=[DataRequired()])
-    position = SelectField("Select Position",validators=[DataRequired()],choices=["SPL","ASPL(Middle)","ASPL(H.Sec)","ASPL(Sr.Sec)"])
+    position = SelectField("Select Position",validators=[InputRequired()],choices=["SPL","ASPL(Middle)","ASPL(H.Sec)","ASPL(Sr.Sec)"])
     file = FileField("Image",validators=[InputRequired()])
     submit = SubmitField("Submit")
 

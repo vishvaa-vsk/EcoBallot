@@ -22,12 +22,14 @@ def login():
             session["rollNo"] = rollNo
             session["name"] = name
             return redirect(url_for("main.splVote"))
-        else:
+        elif getLevel(rollNo) == "Middle":
             new_user = Students(rollNo=int(rollNo),name=str(name))
             db.session.add(new_user)
             session["rollNo"] = rollNo
             session["name"] = name
             return redirect(url_for("main.asplMiddleVote"))
+        else:
+            return "<h1>You are trying to cheat 😡</h1>"
     return render_template("index.html",year=todays_date.year)
 
 @main.route("/splVote",methods=["GET","POST"])
