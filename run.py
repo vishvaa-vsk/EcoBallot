@@ -2,7 +2,7 @@ import os,time
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 def installDependencies():
-    requirementsFile =os.path.join(basedir,'requirements.txt')
+    requirementsFile=os.path.join(f"{basedir}/src/",'requirements.txt')
     if os.path.isfile(requirementsFile):
         os.system(f"pip install -r {requirementsFile}")
 

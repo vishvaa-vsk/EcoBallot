@@ -20,6 +20,8 @@ class AddStudentsForm(FlaskForm):
 
 @admin.route("/",methods=["GET","POST"])
 def adminLogin():
+    if not db.session.query(db.session.query(AdminTable).filter(AdminTable.username == "admin").exists()).scalar():
+        setAdmin()
     if request.method == "POST":
         session.permanent = True
         username,passwd = request.form["username"],request.form["passwd"]

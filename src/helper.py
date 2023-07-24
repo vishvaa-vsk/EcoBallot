@@ -1,4 +1,5 @@
 from .models import *
+from werkzeug.security import generate_password_hash
 
 def getClass(arg):
     result = Students.query.with_entities(Students.rollNo , Students.name).filter(Students.rollNo.startswith(arg)).all()
@@ -20,6 +21,10 @@ def sendASPLSrSecData():
     aspls = CandidateDetails.query.with_entities(CandidateDetails.name,CandidateDetails.imageName).filter(CandidateDetails.position=="ASPL(Sr.Sec)").all()
     return aspls
 
+def setAdmin():
+    username,passwd = "admin",generate_password_hash("sknspmc@1975",method="scrypt")
+    admin = AdminTable(username=username,passwd=passwd)
+    db.session.add(admin)
 
 def getSplResults():
     Candidates = []
