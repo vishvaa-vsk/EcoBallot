@@ -1,3 +1,5 @@
 *.env
 *__pycache__
-./src/static/img/*
+./src/static/img/*.jpg
+./src/static/img/*.jpeg
+./src/static/img/*.png
