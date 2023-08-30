@@ -19,25 +19,25 @@ class Students(db.Model):
 # rollNo is a foreign key referencing the rollNo column in the students table.
 class SplTable(db.Model):
     rollNo = db.Column(db.Integer ,db.ForeignKey('students.rollNo'),primary_key=True)
-    splVotes = db.Column(db.String(50),nullable=False)
+    splName = db.Column(db.String(50),nullable=False)
 
 # The class "Aspl_Sr_Sec_Table" represents a table in a database with columns for roll number and
 # votes for a student in a senior secondary school.
 class Aspl_Sr_Sec_Table(db.Model):
     rollNo = db.Column(db.Integer ,db.ForeignKey('students.rollNo'),primary_key=True)
-    asplVotes = db.Column(db.String(50),nullable=False)
+    asplName = db.Column(db.String(50),nullable=False)
 
 # The class "Aspl_hSec_Table" represents a table in a database with columns for roll number and votes
 # for the ASPL (Assistant School Prefect) position.
 class Aspl_hSec_Table(db.Model):
     rollNo = db.Column(db.Integer ,db.ForeignKey('students.rollNo'),primary_key=True)
-    asplVotes = db.Column(db.String(50),nullable=False)
+    asplName = db.Column(db.String(50),nullable=False)
 
 # The class "Aspl_Middle_Table" represents a middle table in a database with columns for rollNo and
 # asplVotes.
 class Aspl_Middle_Table(db.Model):
     rollNo = db.Column(db.Integer ,db.ForeignKey('students.rollNo'),primary_key=True)
-    asplVotes = db.Column(db.String(50),nullable=False)
+    asplName = db.Column(db.String(50),nullable=False)
 
 # The AdminTable class represents a table in a database with columns for an ID, username, and
 # password.

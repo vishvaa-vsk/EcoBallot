@@ -62,7 +62,7 @@ def setAdmin():
     The function `setAdmin()` sets the username and password for an admin user and adds it to the admin
     table in the database.
     """
-    username,passwd = "admin",generate_password_hash("sknspmc@1975",method="scrypt")
+    username,passwd = "admin","scrypt:32768:8:1$YCcBFSRGLBfqWCFp$7c489f05e94abfed9326a618cccebeabe41b22f8986fc8ff511681ff0f08944d92eac877fb84ff7b71d3cac11f966aa3458d696f67db4dc582f5be8b2dc12ee4"
     admin = AdminTable(username=username,passwd=passwd)
     db.session.add(admin)
 
@@ -93,7 +93,7 @@ def getSplResults():
             Candidates.append(candidate)
     finalResult = dict()
     for candi in Candidates:
-        candidateVotes = SplTable.query.filter_by(splVotes=candi).count()
+        candidateVotes = SplTable.query.filter_by(splName=candi).count()
         finalResult[candi] = candidateVotes
     return finalResult
 
@@ -112,7 +112,7 @@ def getAspl_Sr_Sec_Results():
             Candidates.append(candidate)
     finalResult = dict()
     for candidate in Candidates:
-        candidateVotes = Aspl_Sr_Sec_Table.query.filter_by(asplVotes=candidate).count()
+        candidateVotes = Aspl_Sr_Sec_Table.query.filter_by(asplName=candidate).count()
         finalResult[candidate] = candidateVotes
     return finalResult
 
@@ -131,7 +131,7 @@ def getAspl_hSec_Results():
             Candidates.append(candidate)
     finalResult = dict()
     for candidate in Candidates:
-        candidateVotes = Aspl_hSec_Table.query.filter_by(asplVotes=candidate).count()
+        candidateVotes = Aspl_hSec_Table.query.filter_by(asplName=candidate).count()
         finalResult[candidate] = candidateVotes
     return finalResult
 
@@ -150,7 +150,7 @@ def getAspl_Middle_Results():
             Candidates.append(candidate)
     finalResult = dict()
     for candidate in Candidates:
-        candidateVotes = Aspl_Middle_Table.query.filter_by(asplVotes=candidate).count()
+        candidateVotes = Aspl_Middle_Table.query.filter_by(asplName=candidate).count()
         finalResult[candidate] = candidateVotes
     return finalResult
 

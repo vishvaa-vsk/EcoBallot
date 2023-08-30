@@ -8,7 +8,7 @@ from datetime import date
 # The `date.today()` function is a method from the `datetime` module that returns the current local
 # date as a `date` object.
 todays_date = date.today()
-
+# 
 # The line `main = Blueprint("main",__name__)` is creating a Blueprint object named "main".
 main = Blueprint("main",__name__)
 
@@ -61,7 +61,7 @@ def splVote():
                 if request.form.get('userVote') != None:
                     userVote = request.form.get('userVote')
                     try:
-                        addVote = SplTable(rollNo=int(rollNo) , splVotes=userVote)
+                        addVote = SplTable(rollNo=int(rollNo) , splName=userVote)
                         db.session.add(addVote)
                     except Exception as e:
                         flash(str(e))
@@ -90,7 +90,7 @@ def asplMiddleVote():
                     if request.form.get('userVote') != None:
                         userVote = request.form.get('userVote')
                         try:
-                            addVote = Aspl_Middle_Table(rollNo=rollNo , asplVotes=userVote)
+                            addVote = Aspl_Middle_Table(rollNo=rollNo , asplName=userVote)
                             db.session.add(addVote)
                         except:
                             flash("Internal server error")
@@ -118,7 +118,7 @@ def asplHsecVote():
                     if request.form.get('userVote') != None:
                         userVote = request.form.get('userVote')
                         try:
-                            addVote = Aspl_hSec_Table(rollNo=rollNo,asplVotes=userVote)
+                            addVote = Aspl_hSec_Table(rollNo=rollNo,asplName=userVote)
                             db.session.add(addVote)
                         except:
                             flash("Internal server error")
@@ -146,7 +146,7 @@ def asplSrSecVote():
                     if request.form.get('userVote') != None:
                         userVote = request.form.get('userVote')
                         try:
-                            addVote = Aspl_Sr_Sec_Table(rollNo=rollNo,asplVotes=userVote)
+                            addVote = Aspl_Sr_Sec_Table(rollNo=rollNo,asplName=userVote)
                             db.session.add(addVote)
                         except:
                             flash("Internal server error")

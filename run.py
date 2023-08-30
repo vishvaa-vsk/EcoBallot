@@ -20,14 +20,16 @@ def setAppSecretKey():
         File.write(f"SECRET_KEY={secretKey}\n")
         File.write(f"FLASK_APP=src\n")
 
-# The code `if __name__ == "__main__":` is a common Python idiom that checks if the current script is
-# being run as the main module. In other words, it checks if the script is being executed directly and
-# not imported as a module.
+
+# The code block `if __name__ == "__main__":` is a common idiom in Python that allows a module to be
+# run as a standalone script or imported as a module.
 if __name__ == "__main__":
     try:
         installDependencies()
         if not os.path.isfile(os.path.join(f"{basedir}/src/",".env")):
             setAppSecretKey()
+        if not os.path.isdir(f"{basedir}/src/static/img"):
+            os.mkdir(f"{basedir}/src/static/img")
         time.sleep(1)
         os.system("flask --app src --debug run -h 0.0.0.0 -p 3030")
     except Exception as e:
