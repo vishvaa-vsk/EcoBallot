@@ -110,7 +110,10 @@ def splResult():
        totalVotes = SplTable.query.count()
        result = getSplResults()
        winners = [key for key, value in result.items() if value == max(result.values())]
-       winnerImage = getWinnerPhoto(winners[0])
+       try:
+           winnerImage = getWinnerPhoto(winners[0])
+       except:
+           return "<h1>No candidate details found. <br> Try adding candidates </h1>"
     else:
         return redirect(url_for("admin.adminLogin"))
     return render_template("admin/splResults.html",winnerImage=winnerImage,total_votes=totalVotes,result=result,winners=winners)
@@ -127,7 +130,10 @@ def asplMiddleResult():
        totalVotes = Aspl_Middle_Table.query.count()
        result = getAspl_Middle_Results()
        winners = [key for key, value in result.items() if value == max(result.values())]
-       winnerImage = getWinnerPhoto(winners[0])
+       try:
+           winnerImage = getWinnerPhoto(winners[0])
+       except:
+           return "<h1>No candidate details found. <br> Try adding candidates </h1>"
     else:
         return redirect(url_for("admin.adminLogin"))
     return render_template("admin/asplResults.html",winnerImage=winnerImage,total_votes=totalVotes,result=result,winners=winners)
@@ -146,7 +152,10 @@ def asplHsecResult():
        totalVotes = Aspl_hSec_Table.query.count()
        result = getAspl_hSec_Results()
        winners = [key for key, value in result.items() if value == max(result.values())]
-       winnerImage = getWinnerPhoto(winners[0])
+       try:
+           winnerImage = getWinnerPhoto(winners[0])
+       except:
+           return "<h1>No candidate details found. <br> Try adding candidates </h1>"
     else:
         return redirect(url_for("admin.adminLogin"))
     return render_template("admin/asplResults.html",total_votes=totalVotes,winnerImage=winnerImage,result=result,winners=winners)
@@ -164,7 +173,10 @@ def asplSrSecResult():
        totalVotes = Aspl_Sr_Sec_Table.query.count()
        result = getAspl_Sr_Sec_Results()
        winners = [key for key, value in result.items() if value == max(result.values())]
-       winnerImage = getWinnerPhoto(winners[0])
+       try:
+           winnerImage = getWinnerPhoto(winners[0])
+       except:
+           return "<h1>No candidate details found. <br> Try adding candidates </h1>"
     else:
         return redirect(url_for("admin.adminLogin"))
     return render_template("admin/asplResults.html",total_votes=totalVotes,winnerImage=winnerImage,result=result,winners=winners)
