@@ -19,4 +19,3 @@ SQLAlchemy==2.0.19
 typing_extensions==4.7.1
 Werkzeug==2.3.6
 WTForms==3.0.1
-# Use python3.10.12 version for virtual environment

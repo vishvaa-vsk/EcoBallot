@@ -1,5 +1,7 @@
 # The code `import os,time` imports the `os` and `time` modules in Python.
-import os,time
+import os,time,socket,webbrowser
+
+ip = socket.gethostbyname(socket.gethostname())
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 def installDependencies():
@@ -31,6 +33,8 @@ if __name__ == "__main__":
         if not os.path.isdir(f"{basedir}/src/static/img"):
             os.mkdir(f"{basedir}/src/static/img")
         time.sleep(1)
+        webbrowser.open(f"http://{ip}:3030/")
         os.system("flask --app src --debug run -h 0.0.0.0 -p 3030")
+        
     except Exception as e:
         print(e)
