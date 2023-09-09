@@ -43,5 +43,7 @@ if __name__ == "__main__":
         webbrowser.open(f"http://{ip}:3030/")
         os.system("flask --app src --debug run -h 0.0.0.0 -p 3030")
         
-    except Exception as e:
-        print(e)
+    except KeyboardInterrupt:
+        os.system(f"del {basedir}/src/.env")
+    else:
+        print("Program Failed!")
