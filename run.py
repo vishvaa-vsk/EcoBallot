@@ -8,11 +8,18 @@ def installDependencies():
     """
     The function installs the dependencies listed in the requirements.txt file.
     """
+    """
+    The function installs the dependencies listed in the requirements.txt file.
+    """
     requirementsFile=os.path.join(f"{basedir}/src/",'requirements.txt')
     if os.path.isfile(requirementsFile):
         os.system(f"pip install -r {requirementsFile}")
 
 def setAppSecretKey():
+    """
+    The `setAppSecretKey` function generates a random secret key and writes it to a .env file along with
+    the FLASK_APP variable.
+    """
     """
     The function `setAppSecretKey` generates a random secret key and writes it to a .env file along with
     the FLASK_APP variable.
