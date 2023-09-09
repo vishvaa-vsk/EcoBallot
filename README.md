@@ -39,7 +39,7 @@ To use MySQL Database, uncomment the config file's no 10<sup>th</sup> line
 SQLALCHEMY_DATABASE_URI = "mysql+pymysql://username:password@localhost/database_name"
 ```
 
-#### Replace the `username` to the username of MySQL, `passwd`,`localhost` and `database_name` with the created one.
+#### Replace the `username` to the username of MySQL, `password`,`localhost` and `database_name` with the created one.
 
 #### Make sure you comment the next line to avoid writing in the local file.
 ****
