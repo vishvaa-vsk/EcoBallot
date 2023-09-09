@@ -41,7 +41,7 @@ SQLALCHEMY_DATABASE_URI = "mysql+pymysql://username:password@localhost/database_
 
 #### Replace the `username` to the username of MySQL, `password`,`localhost` and `database_name` with the created one.
 
-#### Make sure you comment the next line to avoid writing in the local file.
+#### **Make sure you comment the next line to avoid writing in the local file.
 ****
 
 # Unkown issues
