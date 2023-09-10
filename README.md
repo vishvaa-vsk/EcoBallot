@@ -24,7 +24,7 @@ Or run the run.py file with
 ```
 python3 run.py
 ```
-It will automatically open the browser with the app's url
+It will automatically open the default browser with the app's url
 ****
 # How to connect it to MySQL (not connected by default)
 
@@ -44,7 +44,7 @@ SQLALCHEMY_DATABASE_URI = "mysql+pymysql://username:password@localhost/database_
 #### **Make sure you comment the next line to avoid writing in the local file.
 ****
 
-# Unkown issues
+# Known issues
 #### * Python not found or pip not found:
 Usually, this error occurs when python is not installed in the PATH (if you did not check the add Python to the PATH during installation of python). You might get this error even you did the above mentioned.  
 
