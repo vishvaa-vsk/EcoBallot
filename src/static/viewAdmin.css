@@ -19,10 +19,8 @@ th {
   color: white;
 }
 
-
-.grid-item table{
-  margin: auto;
-  row-gap: 15px;
+.grid-item{
   display: inline-grid;
-  align-content: space-around;
+  column-gap: 15px;
+  align-content: space-between;
 }
