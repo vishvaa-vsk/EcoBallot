@@ -24,7 +24,7 @@ Or run the run.py file with
 ```
 python3 run.py
 ```
-It will automatically open the browser with the app's url
+It will automatically open the default browser with the app's url
 ****
 # How to connect it to MySQL (not connected by default)
 
