@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 table {
-  border-collapse: collapse;
+  border-collapse:separate;
+  border: 3px solid #04AA6D;
+  border-radius: 10px;
 }
 
 th, td {
-  text-align: left;
+  border-radius: 5px;
+  text-align: center;
   padding: 8px;
 }
 
@@ -17,10 +20,9 @@ th {
 }
 
 
-
 .grid-item table{
   margin: auto;
+  row-gap: 15px;
   display: inline-grid;
   align-content: space-around;
-
 }
