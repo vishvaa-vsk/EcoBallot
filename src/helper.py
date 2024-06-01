@@ -62,7 +62,7 @@ def setAdmin():
     The function `setAdmin()` sets the username and password for an admin user and adds it to the admin
     table in the database.
     """
-    username,passwd = "admin","scrypt:32768:8:1$YCcBFSRGLBfqWCFp$7c489f05e94abfed9326a618cccebeabe41b22f8986fc8ff511681ff0f08944d92eac877fb84ff7b71d3cac11f966aa3458d696f67db4dc582f5be8b2dc12ee4"
+    username,passwd = "admin","scrypt:32768:8:1$p7miDfAcC5ufDc7c$c96867238b5b078157655cde6e426cfb52601ca67b5b396e6641428de381527f5b051fc4435b1108af40ea0a9f6e2b683642ad7caefb2cc0f32f9f59492759c9"
     admin = AdminTable(username=username,passwd=passwd)
     db.session.add(admin)
 
