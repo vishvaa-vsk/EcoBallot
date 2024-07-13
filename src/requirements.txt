@@ -13,7 +13,7 @@ mysql-connector==2.2.9
 mysql-connector-python==8.1.0
 protobuf==4.21.12
 pycparser==2.21
-PyMySQL==1.1.0
+PyMySQL==1.1.1
 python-dotenv==1.0.0
 SQLAlchemy==2.0.19
 typing_extensions==4.7.1
